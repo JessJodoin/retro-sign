@@ -1,4 +1,15 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
 html {
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
   box-sizing: border-box;
 }
 
@@ -21,7 +32,32 @@ svg {
   cursor: pointer;
 }
 
+.btn-active {
+  fill: #f60;
+}
+
+.btn:hover path:last-child {
+  fill: #f60;
+}
+
 .lines path {
   stroke-dasharray: 480px;
   stroke-dashoffset: 480px;
+  animation: draw-lines 1s forwards;
+}
+
+.lines .draw-lines {
+
+}
+
+@keyframes draw-lines {
+
+  0% {
+    stroke-dashoffset: 480px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+
 }
