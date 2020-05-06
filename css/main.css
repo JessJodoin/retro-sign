@@ -44,11 +44,10 @@ svg {
 .lines path {
   stroke-dasharray: 480px;
   stroke-dashoffset: 480px;
-  animation: draw-lines 1s forwards;
 }
 
 .lines .draw-lines {
-
+  animation: draw-lines 1s forwards;
 }
 
 @keyframes draw-lines {
@@ -59,6 +58,33 @@ svg {
 
   100% {
     stroke-dashoffset: 0;
+  }
+
+}
+
+.engage .letters-in:nth-child(1),
+.engage .letters-in:nth-child(6) {
+  animation: engage-in .3s .8s ease forwards;
+}
+
+.engage .letters-in:nth-child(2),
+.engage .letters-in:nth-child(5) {
+  animation: engage-in .3s .9s ease forwards;
+}
+
+.engage .letters-in:nth-child(3),
+.engage .letters-in:nth-child(4) {
+  animation: engage-in .3s 1s ease forwards;
+}
+
+@keyframes engage-in {
+
+  0% {
+    fill: #630;
+  }
+
+  100% {
+    fill: #f60;
   }
 
 }
