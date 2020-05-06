@@ -38,6 +38,7 @@ svg {
 
 .btn:hover path:last-child {
   fill: #f60;
+  transition: all .5s ease;
 }
 
 .lines path {
